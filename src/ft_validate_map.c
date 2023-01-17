@@ -6,7 +6,7 @@
 /*   By: lfrank <lfrank@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 12:54:22 by lfrank            #+#    #+#             */
-/*   Updated: 2023/01/09 12:49:02 by lfrank           ###   ########.fr       */
+/*   Updated: 2023/01/11 15:37:53 by lfrank           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_validate_map(char *str_map, t_game *game)
 {
 	ft_validate_characters(str_map);
 	ft_amount_of_characters(str_map, game);
+	ft_validate_length(str_map);
 	ft_validate_line_length(str_map);
-	ft_string_to_2d(str_map);
 }
 
 void	ft_validate_characters(char *str_map)
@@ -57,6 +57,22 @@ void	ft_amount_of_characters(char *str_map, t_game *game)
 	if (p_count != 1 || e_count != 1 || c_count < 1)
 		ft_error_message(E_CHARS, 1);
 	game->c_count = c_count;
+}
+
+void	ft_validate_length(char *str_map)
+{
+	int	i;
+	int	count_first_line;
+
+	i = 0;
+	count_first_line = 0;
+	while (str_map[i] != '\n')
+	{
+		count_first_line++;
+		i++;
+	}
+	if (count_first_line >= 128)
+		ft_error_message(E_MAX, 1);
 }
 
 void	ft_validate_line_length(char *str_map)

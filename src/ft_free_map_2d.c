@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_message.c                                 :+:      :+:    :+:   */
+/*   ft_map_2D_copy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrank <lfrank@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 10:57:15 by lfrank            #+#    #+#             */
-/*   Updated: 2023/01/09 11:25:38 by lfrank           ###   ########.fr       */
+/*   Created: 2023/01/09 10:56:57 by lfrank            #+#    #+#             */
+/*   Updated: 2023/01/09 14:59:26 by lfrank           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	ft_print_message(t_game *game)
+void	ft_free_map_2d(char **map_2d)
 {
-	if (game->state == STATE_SUCCESS)
+	int	i;
+
+	i = 0;
+	if (map_2d == NULL)
+		return ;
+	while (map_2d[i])
 	{
-		ft_printf("\nCONGRATULATIONS!!!");
-		ft_printf("You completed the game in %d moves!\n", game->move_count);
+		free(map_2d[i]);
+		i++;
 	}
-	else if (game->state == STATE_CLOSING)
-		ft_printf("\nNext time, we should get these nuts!\n");
-	else if (game->state == STATE_GAMEOVER)
-		ft_printf("\nOh no! Next time, try to avoid them.\n");
+	free(map_2d);
+	map_2d = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: lfrank <lfrank@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 12:54:27 by lfrank            #+#    #+#             */
-/*   Updated: 2023/01/09 12:40:01 by lfrank           ###   ########.fr       */
+/*   Updated: 2023/01/16 13:09:28 by lfrank           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	hook(void *param)
 
 void	ft_initialize_variables(t_game *game)
 {
-	game->old_assets = NULL;
 	game->move_count = 0;
 	game->state = STATE_NULL;
+	game->exit_flag = FALSE;
 }
 
 int	main(int argc, char **argv)
@@ -35,7 +35,6 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		ft_error_message(E_ARG, 1);
 	str_map = ft_read_map(argv[1]);
-	printf("\nStr_Map:\n%s\n", str_map);
 	ft_initialize_variables(&game);
 	ft_validate_map(str_map, &game);
 	game.map_2d = ft_string_to_2d(str_map);
@@ -51,6 +50,7 @@ int	main(int argc, char **argv)
 	mlx_loop_hook(game.mlx, &hook, &game);
 	mlx_key_hook(game.mlx, &ft_key_hook, &game);
 	mlx_loop(game.mlx);
+	ft_free_map_2d(game.map_2d);
 	mlx_terminate(game.mlx);
 	return (EXIT_SUCCESS);
 }

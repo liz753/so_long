@@ -6,7 +6,7 @@
 /*   By: lfrank <lfrank@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 12:54:02 by lfrank            #+#    #+#             */
-/*   Updated: 2023/01/09 14:57:52 by lfrank           ###   ########.fr       */
+/*   Updated: 2023/01/16 13:15:57 by lfrank           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,28 @@ mlx_image_t	*ft_asset_to_image(mlx_t *mlx, char *img_path)
 	img = mlx_texture_to_image(mlx, &texture);
 	if (!img)
 		ft_printf("\nimg is null\n");
+	mlx_delete_xpm42(xpm);
 	return (img);
 }
 
 void	ft_image_to_window(t_game *game, int x, int y)
 {
 	if (y != 0 || x != 0)
-		mlx_image_to_window(game->mlx, game->assets[ID_FLOOR], x * 64, y * 64);
+		mlx_image_to_window(game->mlx, game->assets.floor, x * 64, y * 64);
 	if (game->map_2d[y][x] == '1')
-		mlx_image_to_window(game->mlx, game->assets[ID_BUSH], x * 64, y * 64);
+		mlx_image_to_window(game->mlx, game->assets.bush, x * 64, y * 64);
 	else if (game->map_2d[y][x] == 'E')
-		mlx_image_to_window(game->mlx, game->assets[ID_TREE], x * 64, y * 64);
+		mlx_image_to_window(game->mlx, game->assets.tree, x * 64, y * 64);
 	else if (game->map_2d[y][x] == 'P')
-		mlx_image_to_window(game->mlx, game->assets[ID_P_E], x * 64, y * 64);
+		mlx_image_to_window(game->mlx, game->assets.squirrel, x * 64, y * 64);
 	else if (game->map_2d[y][x] == 'C')
-		mlx_image_to_window(game->mlx, game->assets[ID_ACORN], x * 64 + 16,
+		mlx_image_to_window(game->mlx, game->assets.acorn, x * 64 + 16,
 			y * 64 + 16);
 	if (y == 0 && x == 0)
-		mlx_image_to_window(game->mlx, game->assets[ID_FLOOR], x * 64, y * 64);
+		mlx_image_to_window(game->mlx, game->assets.floor, x * 64, y * 64);
 }
 
-int	ft_put_image_in_map(t_game *game)
+void	ft_put_image_in_map(t_game *game)
 {
 	int			x;
 	int			y;
@@ -82,20 +83,15 @@ int	ft_put_image_in_map(t_game *game)
 		if (game->exit == TRUE)
 			ft_game_won(game);
 	}
-	return (0);
+	return ;
 }
 
 void	ft_game_won(t_game *game)
 {
-	mlx_image_t	*g_img;
-
 	ft_clean_old_assets(game);
 	game->old_assets = game->assets;
 	ft_clean_old_assets(game);
 	game->state = STATE_SUCCESS;
 	ft_print_message(game);
-	g_img = mlx_new_image(game->mlx, game->screen_x, game->screen_y);
-	mlx_image_to_window(game->mlx,
-		ft_asset_to_image(game->mlx, "./assets/YOU_WON.xpm42"),
-		game->screen_x / 2 - 160, 0);
+	mlx_close_window(game->mlx);
 }
