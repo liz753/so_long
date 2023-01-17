@@ -1,46 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map_2D_copy.c                                   :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrank <lfrank@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 10:56:57 by lfrank            #+#    #+#             */
-/*   Updated: 2023/01/09 14:59:26 by lfrank           ###   ########.fr       */
+/*   Created: 2022/10/31 11:57:44 by lfrank            #+#    #+#             */
+/*   Updated: 2022/11/03 20:00:03 by lfrank           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-char	**ft_2dmap_copy(t_game *game)
-{
-	char	**map_2d_copy;
-	int		i;
+/* The bzero() function copies n bytes (b), 
+each with a value of zero, into string s */
 
-	i = 0;
-	map_2d_copy = ft_calloc(sizeof(char *), (game->rows));
-	if (!map_2d_copy)
-		return (NULL);
-	while (i < game->rows)
-	{
-		map_2d_copy[i] = ft_strdup(game->map_2d[i]);
-		i++;
-	}
-	return (map_2d_copy);
-}
-
-void	ft_free_map_2d(char **map_2d)
+void	ft_bzero(void *s, size_t n)
 {
 	int	i;
 
 	i = 0;
-	if (map_2d == NULL)
+	if (s == NULL)
 		return ;
-	while (map_2d[i])
+	while (n > 0)
 	{
-		free(map_2d[i]);
+		((char *)s)[i] = 0;
 		i++;
+		n--;
 	}
-	free(map_2d);
-	map_2d = NULL;
 }
