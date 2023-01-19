@@ -47,14 +47,18 @@ I got started with a to-do-list that I then worked off bit by bit:
 *   image research 
 *   image manipulation using GIMP (transparency and resizing)
 
-<ins>2. Parsing</ins>
+<ins>2. Code Structure</ins>
+*   create a Makefile that doesn't relink
+*   create a header file 
+
+<ins>3. Parsing</ins>
 *   read the map file with the C-functions ``open`` and ``read`` and store its content in a string
 *   store the map in a 2D-array
 *   check that the map is valid (see requirements above)
 *   check that the path is valid (all collectibles and exit reachable) using floodfill
 *   implement error messages
 
-<ins>3. Game Coding</ins>
+<ins>4. Game Coding</ins>
 *   keyboard input (``W`` ``A`` ``S`` ``D`` + arrow keys)
 *   image conversion to ``.xpm42`` 
 *   initialization of assets (in this case only images)
@@ -63,9 +67,13 @@ I got started with a to-do-list that I then worked off bit by bit:
 *   display the movement count in the shell
 *   display messages in the shell (a)when player wants to go on exit before collecting all the collectibles, b) when the player collected them all, c) when     the player quit the game before finishing and d)when the player won the game)
 
-<ins>4. Bonus</ins>
-*   add an enemy patrol as a character 
-*   
+<ins>5. Bonus</ins>
+*   add an enemy patrol as a character (X)
+*   implement enemys random movements 
+*   collision detection
+*   add some sprite animation (enemy will get agitated when player collected 3 collectibles)
+*   display movement count + collectible count + messages in window 
+*   design "You won"-image und "Game Over"-image and display them accordingly in the window 
 
 ## Bonus 
 <div align="center">
@@ -73,6 +81,10 @@ I got started with a to-do-list that I then worked off bit by bit:
 </div>
 
 ## Result 
+
+Here is a sample gameplay of the original game (without the bonus part):
+<div align="center">
+
 
 ## Tips for 42 students 
 
