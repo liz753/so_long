@@ -90,8 +90,6 @@ Here are some sample gameplays with the bonus part:
 
 ![Game_bonus](https://user-images.githubusercontent.com/114035440/213346992-87f44fa2-af99-44ec-88b8-afed6b72ae28.gif)
 
-![Bonus_gameover](https://user-images.githubusercontent.com/114035440/213347785-752a10d4-9cff-411e-98dc-a180bfda22bb.gif)
-
 ![pz2lz-22ycj](https://user-images.githubusercontent.com/114035440/213475698-e9776bae-260d-4613-8ef6-eefebbea8858.gif)
 
 
