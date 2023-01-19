@@ -83,18 +83,14 @@ I got started with a to-do-list that I then worked off bit by bit:
 ## Result 
 
 Here is a sample gameplay of the original game (without the bonus part):
-<div align="center">
 ![Game](https://user-images.githubusercontent.com/114035440/213346656-3e325581-7596-41f3-b383-365fef00d9ac.gif)
-</div>
 
 Here are some sample gameplays with the bonus part:
-<div align="center">
-![Game_bonus](https://user-images.githubusercontent.com/114035440/213346992-87f44fa2-af99-44ec-88b8-afed6b72ae28.gif)
-</div>
 
-<div align="center">
+![Game_bonus](https://user-images.githubusercontent.com/114035440/213346992-87f44fa2-af99-44ec-88b8-afed6b72ae28.gif)
+
 ![Bonus_gameover](https://user-images.githubusercontent.com/114035440/213347785-752a10d4-9cff-411e-98dc-a180bfda22bb.gif)
-</div>
+
 
 ## Tips for 42 students 
 
