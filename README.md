@@ -84,7 +84,7 @@ I got started with a to-do-list that I then worked off bit by bit:
 ## Result 
 
 Here is a sample gameplay of the original game (without the bonus part):
-![Game](https://user-images.githubusercontent.com/114035440/213346656-3e325581-7596-41f3-b383-365fef00d9ac.gif)
+![47yux-a36mx](https://user-images.githubusercontent.com/114035440/213477508-2c66cb27-29c3-4910-88cd-092e3393f9a4.gif)
 
 Here are some sample gameplays with the bonus part:
 
