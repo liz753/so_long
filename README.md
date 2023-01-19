@@ -60,7 +60,7 @@ I got started with a to-do-list that I then worked off bit by bit:
 
 <ins>4. Game Coding</ins>
 *   keyboard input (``W`` ``A`` ``S`` ``D`` + arrow keys)
-*   image conversion to ``.xpm42`` 
+*   image conversion to ``.xpm42`` using ``python``
 *   initialization of assets (in this case only images)
 *   rendering 
 *   implement the hooks
@@ -84,8 +84,20 @@ I got started with a to-do-list that I then worked off bit by bit:
 
 Here is a sample gameplay of the original game (without the bonus part):
 <div align="center">
+![Game](https://user-images.githubusercontent.com/114035440/213346656-3e325581-7596-41f3-b383-365fef00d9ac.gif)
+</div>
 
+Here are some sample gameplays with the bonus part:
+<div align="center">
+![Game_bonus](https://user-images.githubusercontent.com/114035440/213346992-87f44fa2-af99-44ec-88b8-afed6b72ae28.gif)
+</div>
+
+<div align="center">
+![Bonus_gameover](https://user-images.githubusercontent.com/114035440/213347785-752a10d4-9cff-411e-98dc-a180bfda22bb.gif)
+</div>
 
 ## Tips for 42 students 
 
 ## What I learned 
+I digged into the cross-platform graphics interface MLX42. I learned how to deal with textures, images and pixels.  
+ALl in all, I really enjoyed this project because of its concrete output and liked it the most of all the 42 projects so far.
