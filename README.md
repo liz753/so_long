@@ -7,7 +7,7 @@ Small 2D Game
 
 ## Table of Contents
 
-* [Project Overview](#projectoverview)
+* [Project Overview](#project-overview)
 * [Divide and Conquer](#divide-and-conquer)
 * [Bonus](#bonus)
 * [Result](#result)
