@@ -88,7 +88,7 @@ Here is a sample gameplay of the original game (without the bonus part):
 
 Here are some sample gameplays with the bonus part:
 
-![Game_bonus](https://user-images.githubusercontent.com/114035440/213346992-87f44fa2-af99-44ec-88b8-afed6b72ae28.gif)
+![fw7hl-vaxu1](https://user-images.githubusercontent.com/114035440/213476899-ec70c44e-fdd8-4d48-a855-b67acf33e335.gif)
 
 ![pz2lz-22ycj](https://user-images.githubusercontent.com/114035440/213475698-e9776bae-260d-4613-8ef6-eefebbea8858.gif)
 
