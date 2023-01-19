@@ -59,13 +59,14 @@ I got started with a to-do-list that I then worked off bit by bit:
 *   implement error messages
 
 <ins>4. Game Coding</ins>
-*   keyboard input (``W`` ``A`` ``S`` ``D`` + arrow keys)
+*   keyboard input (``W`` ``A`` ``S`` ``D`` + arrow keys for moving and ``ESC`` for closing the game)
 *   image conversion to ``.xpm42`` using ``python``
 *   initialization of assets (in this case only images)
 *   rendering 
 *   implement the hooks
 *   display the movement count in the shell
 *   display messages in the shell (a)when player wants to go on exit before collecting all the collectibles, b) when the player collected them all, c) when     the player quit the game before finishing and d)when the player won the game)
+*   add more maps
 
 <ins>5. Bonus</ins>
 *   add an enemy patrol as a character (X)
