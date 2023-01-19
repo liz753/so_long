@@ -92,6 +92,9 @@ Here are some sample gameplays with the bonus part:
 
 ![Bonus_gameover](https://user-images.githubusercontent.com/114035440/213347785-752a10d4-9cff-411e-98dc-a180bfda22bb.gif)
 
+![Untitled](https://user-images.githubusercontent.com/114035440/213349017-1259095a-b301-41be-910f-eabed3c5aace.gif)
+
+
 
 ## Tips for 42 students 
 
