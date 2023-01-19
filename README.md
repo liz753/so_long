@@ -23,19 +23,19 @@ For the graphic part of the project I used the library provided by 42 codam: htt
 The game can be played with different maps which are given as arguments to the program. The maps are difined in a ".ber"-file and have certain requirements to fulfill.  
 
 # Map Requirements 
-• The map has to be constructed with 3 components: walls, collectibles, and free space.
-• The map can be composed of only these 5 characters: 
+* The map has to be constructed with 3 components: walls, collectibles, and free space.
+* The map can be composed of only these 5 characters: 
     0 for an empty space,
     1 for a wall,
     C for a collectible,
     E for a map exit,
     P for the player’s starting position.
-• The map must contain 1 exit, at least 1 collectible, and 1 starting position to be valid.
-• The map must be rectangular.
-• The map must be closed/surrounded by walls. If it’s not, the program must return an error.
-• There must be a valid path in the map.
-• You must be able to parse any kind of map, as long as it respects the above rules.
-• If any misconfiguration of any kind is encountered in the file, the program must exit in a clean way, and return "Error\n" followed by an explicit error   message of your choice.
+* The map must contain 1 exit, at least 1 collectible, and 1 starting position to be valid.
++ The map must be rectangular.
++ The map must be closed/surrounded by walls. If it’s not, the program must return an error.
++ There must be a valid path in the map.
++ You must be able to parse any kind of map, as long as it respects the above rules.
++ If any misconfiguration of any kind is encountered in the file, the program must exit in a clean way, and return "Error\n" followed by an explicit error   message of your choice.
 
 ## Divde and Conquer 
 
