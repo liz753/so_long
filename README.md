@@ -90,7 +90,12 @@ Here are some sample gameplays with the bonus part:
 
 ![fw7hl-vaxu1](https://user-images.githubusercontent.com/114035440/213476899-ec70c44e-fdd8-4d48-a855-b67acf33e335.gif)
 
+
 ![pz2lz-22ycj](https://user-images.githubusercontent.com/114035440/213475698-e9776bae-260d-4613-8ef6-eefebbea8858.gif)
+
+
+![uh8ub-d2vw5](https://user-images.githubusercontent.com/114035440/213786640-c86e3474-1e1f-4b62-ba87-57c3fd4034f2.gif)
+
 
 
 ## Tips for 42 students 
