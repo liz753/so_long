@@ -60,7 +60,7 @@ I got started with a to-do-list that I then worked off bit by bit:
 
 <ins>4. Game Coding</ins>
 *   keyboard input (``W`` ``A`` ``S`` ``D`` + arrow keys for moving and ``ESC`` for closing the game)
-*   image conversion to ``.xpm42`` using ``python``
+*   image conversion to ``.xpm42`` using ``xpm3_conv.py``-file of the MLX42
 *   initialization of assets (in this case only images)
 *   rendering 
 *   implement the hooks
@@ -94,7 +94,16 @@ Here are some sample gameplays with the bonus part:
 
 
 ## Tips for 42 students 
+*   if you haven't worked with structs before, take the opportunity to do so at the beginning of the project, you will need them
+*   before coding a new function, think of the functions you already have in libft and see if you can use them (obviously you can also use ft_printf und       get_next_line for this project), HOWEVER: every problem can be solved in different ways, so don't feel obligated to use code from previous projects if     you think of a better solution (for example, I preferred to read the file character by character and put it in one string first before converting it       to a 2D-array instead of using gnl)
+*   concerning the images, my first reflex was to allocate memory on the heap every loophook but it's more convenient and less risky for leaks to simply       put them in a struct as pointer to ``mlx_image_t``
+*   at the beginning, the players movement lagged a bit, so I decided to delete and rerender the images at every hook
+*   for the enemy movement I used the C-function ``rand()`` to decide in which direction the enemy would move. The enemy can move one tile at a time in       any direction. To achieve this, I needed a random number between -1 and 1, which I obtained using this formula: ´´´(rand() % 3) - 1´´´. I then added       the randomly generated number to the x and y coordinates of the enemy to make it move accordingly. This means it can also move diagonally.
+*   for the sprite animation, I alternate between two images at a given frequency. This frequency is determined using a gameloop-count and a speed             variable. Every loop, I check if the result of gameloop-count % speed is over or under half the speed. One image or the other is shown respectively
+*   make sure you clean your old assets and messages/strings that you put in the window, you can use the MLX42-function ``mlx_delete_image`` to do so
+*   for leaks detection I used ``leaks -atExit -- ./so_long [a map-file]`` instead of valgrind. Xcode’s leaks function is a very handy tool and is already     preinstalled on the school computers
 
 ## What I learned 
-I digged into the cross-platform graphics interface MLX42. I learned how to deal with textures, images and pixels.  
-ALl in all, I really enjoyed this project because of its concrete output and liked it the most of all the 42 projects so far.
+I learned how to manipulate images using GIMP.
+I digged into the cross-platform graphics interface MLX42. I learned how to deal with textures, images and pixels. Plus, I learned how to use hooks, structs and random numbers. I learned how to implement error management and think about the edge cases. I improved my understanding of the Makefile and adopted the habit of testing my code after every change the hard way. Finally, I deepened my understanding of the heap and the stack. I learned to avoid heap allocation when possible. 
+All in all, I really enjoyed this project because of its concrete output and liked it the most of all the 42 projects so far.
