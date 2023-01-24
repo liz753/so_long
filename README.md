@@ -15,7 +15,7 @@ Small 2D Game
 * [What I learned](#what-i-learned)
 
 ## Project Overview
-This project is about coding a simple 2D game à la Pac-Man. The player’s goal is to collect every collectible present on the map, then escape chosing the shortest possible route.
+This project is about coding a simple 2D game à la Pac-Man. The player’s goal is to collect every collectible present on the map, then escape choosing the shortest possible route.
 
 My goals in coding the game is to get familiar with textures, sprites, and some other very basic gameplay elements (and get my nieces and nephews amused).
 I was free to choose a theme and I decided to let a squirrel collect some nuts in a parc.
